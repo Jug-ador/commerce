@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="main-content container">
+    <h2 class="text-center">Your Profile</h2>
+    <div id="profile-info" class="profile-header"></div>
+
+    <form id="avatar-form" class="form-container" enctype="multipart/form-data">
+      <div class="form-group">
+        <label class="form-label">Change Avatar</label>
+        <input type="file" name="avatar" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-outline btn-block">Upload Avatar</button>
+    </form>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
