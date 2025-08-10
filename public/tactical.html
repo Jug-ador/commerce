@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tactical gear</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .product-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      text-align: center;
+    }
+    .product-container img {
+      max-width: 400px;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+    .product-price {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-top: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      transition: background-color var(--transition-normal);
+    }
+    .btn:hover {
+      background-color: var(--dark-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="product-container">
+    <h1>Product 1</h1>
+    <img src="images/product1.jpg" alt="Product 1">
+    <p class="product-price">$29.99</p>
+    <p>This is Product 1. It’s an amazing product with top-notch quality.</p>
+    <a href="cart.html" class="btn">Add to Cart</a>
+  </div>
+</body>
+</html>

@@ -59,7 +59,8 @@ body {
   font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
   color: var(--dark-color);
-  background-color: var(--light-color);
+  background: url("images/bg102.jpeg");
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -69,6 +70,10 @@ a {
   text-decoration: none;
   color: inherit;
   transition: var(--transition-normal);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 img {
@@ -282,53 +287,53 @@ h3 { font-size: var(--font-size-lg); }
 /* ============= */
 /* Product Grid (Index Page) */
 /* ============= */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--space-lg);
-  margin-top: var(--space-xl);
+.product-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
 }
 
-.product-card {
-  background-color: white;
-  border-radius: var(--border-radius);
+.product-card-link {
+  position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-normal);
+  width: 300px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
-.product-image {
-  height: 200px;
+.product-card-link img {
   width: 100%;
-  object-fit: cover;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  transition: transform var(--transition-normal);
 }
 
-.product-info {
-  padding: var(--space-lg);
+.product-card-link:hover img {
+  transform: scale(1.08);
 }
 
-.product-title {
-  font-size: 1.1rem;
-  margin-bottom: var(--space-sm);
+.product-card-link:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
-.product-price {
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: var(--space-sm);
-  font-size: 1.25rem;
+.product-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
 }
 
-.product-rating {
-  color: #ffc107;
-  margin-bottom: var(--space-sm);
+.product-card-link:hover .product-overlay {
+  opacity: 1;
 }
-
 /* ============= */
 /* Cart Page */
 /* ============= */
